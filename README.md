@@ -1,2 +1,1 @@
 # actions-practica
-test
