@@ -11,3 +11,6 @@ jobs:
           node-version: 22
       - run: echo "Hola desde GitHub"
       - run: node -v
+      - run: echo "El secreto es $MI_SECRETO"
+        env:
+          MI_SECRETO: ${{ secrets.MI_SECRETO }}
