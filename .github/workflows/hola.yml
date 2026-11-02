@@ -1,5 +1,7 @@
 name: Hola Actions
-on: push
+on:
+  push:
+  workflow_dispatch:
 jobs:
   saludo:
     runs-on: ubuntu-latest
@@ -9,5 +11,3 @@ jobs:
           node-version: 22
       - run: echo "Hola desde GitHub"
       - run: node -v
-      - run: exit 1
-      - run: echo "¿Llegué?"
