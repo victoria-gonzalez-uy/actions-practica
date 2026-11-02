@@ -11,6 +11,11 @@ jobs:
           node-version: 22
       - run: echo "Hola desde GitHub"
       - run: node -v
-      - run: echo "El secreto es $MI_SECRETO"
+      - run: |
+          if [ -z "$MI_SECRETO" ]; then
+            echo "Falta el secret MI_SECRETO"
+            exit 1
+          fi
+          echo "Secret OK"
         env:
           MI_SECRETO: ${{ secrets.MI_SECRETO }}
